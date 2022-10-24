@@ -1,0 +1,86 @@
+.container{
+    display: grid;
+    /* align-items: flex-start; */
+    justify-content: center;
+    padding-right: clamp(0px, 30vw, 30%);
+    padding-left: clamp(0px, 30vw, 30%);
+    padding-top: clamp(0px, 20vh, 10%);
+    padding-bottom: clamp(0px, 20vh, 30%);
+    grid-gap: 1px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 5vh);
+    grid-template-areas:
+    "DC"
+    "DC"
+    "PC"
+    "PC"
+    "PC"
+    "PC"
+    "PC"
+}
+.display-container{ grid-area: DC; }
+.pad-container{ grid-area: PC; }
+
+.display-container{
+    display: grid;
+    /* align-items: center; */
+    background-color: black;
+    text-align: right;
+    padding: 2%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "FD"
+    "OD"
+}
+.input-display{
+    grid-area: FD;
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(236, 206, 71);
+}
+.output-display{ 
+    grid-area: OD;
+    font-weight: normal;
+    font-size: 30px;
+    color: white;
+    
+}
+
+.pad-container{
+    display: grid;
+    /* align-items: center; */
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "cl cl di mu"
+    "7 8 9 su"
+    "4 5 6 ad"
+    "1 2 3 eq"
+    "zr zr pt eq"
+    ;
+}
+#clear{ grid-area: cl; }
+#equals{ grid-area: eq; }
+#zero{ grid-area: zr; }
+
+.pad:hover{
+    border: 1px solid whitesmoke;
+    color: rgb(231, 230, 137);
+}
+
+.pad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+}
+
+.dark-gray{ background-color: rgb(75, 73, 73);}
+.tomato{ background-color: tomato;}
+.blue{background-color: rgb(100, 169, 226);}
+
