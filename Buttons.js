@@ -27,7 +27,7 @@ const Buttons = () => {
                 + input
             );
         }
-        // WHEN INPUT IS A NON-OPERATOR!
+        // WHEN INPUT IS A NON-OPERATOR
         else if (!/[\/\*\+\-]/.test(input)) {
             // Remove sign in output-value
             if (outputValue === "/" | outputValue === "*" | outputValue === "+" |  outputValue === "-") {
